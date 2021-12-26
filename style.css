@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200&display=swap');
+
+body{
+	background-color: #282c4c;
+	font-family: 'Mukta', sans-serif;
+}
+
+#whole{
+	background-color: #30345c;
+	margin-left: 5%;
+	margin-right: 5%;
+	padding: 15px 15px 15px 15px;
+	border-radius: 15px;
+}
+
+#prompt{
+	position: relative;
+	visibility: hidden;
+	text-align: center;
+	color: white;
+}
+
+#card{
+	position: relative;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	height: 1%;
+	width: auto;
+	border-radius: 25px;
+}
+
+#important{
+	position: relative;
+	display: block;
+	margin-top: 2%;
+	margin-left: auto;
+	margin-right: auto;
+	border: none;
+	color: white;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	font-size: 16px;
+	cursor: pointer;
+	background-color: #282c4c;
+	border-radius: 5px;
+}
+
+#important:hover{
+	background-color: #282444;
+}
+
+#turns{
+	position: relative;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	color: white;
+	text-align: center;
+}
+
+@media only screen and (max-width: 1000px) {
+
+  #whole{
+	  margin-top: 5%;
+  }
+  #card{
+	  height: 1100px;
+	  width: auto;
+  }
+  
+  #prompt{
+	  margin-top: 8%;
+	  font-size: 64px;
+  
+  }
+  
+  #important{
+	  font-size: 64px;
+	  margin-top: 5%;
+	  padding: 30px 128px;
+	  border-radius: 15px;
+  }
+  
+  #turns{
+	font-size: 60px;
+  }
+}
