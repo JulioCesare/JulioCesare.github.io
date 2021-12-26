@@ -93,36 +93,24 @@ function checkContinue(){
 					break;
 				}
 			}
-			if (!hehgarancy){	
-				document.getElementById("prompt").innerHTML = "Verso/con " + namesCounter[nameC] + ".";
-				document.getElementById("card").src = "cards/char/versus/" + namesCounter[nameC] + "char.png";
+			if (catNum == 0){
+				
+				if (!hehgarancy){	
+					document.getElementById("card").src = "cards/char/versus/" + namesCounter[nameC] + "char.png";
+					namesCounter.splice(nameC,1);
+				}
+				else{
+					document.getElementById("card").src = "cards/char/versus/push-ups.png";
+					hehgarancy=0;
+				}
 			}
 			else{
-				document.getElementById("prompt").innerHTML = "Gioca con sé stesso.";
-				document.getElementById("card").src = "cards/char/versus/" + namesCounter[nameC] + "char.png";
-				hehgarancy=0;
+				document.getElementById("card").src = "cards/char/versus/EVERYBODYchar.png";
 			}
-			namesCounter.splice(nameC,1);
+			
 			fase = 0;
 			total_points++;
 			lastname = ""
 			break;
 		}
-	/*if(fase == 0)
-	{
-		
-	}
-	else if (fase == 1)
-	{
-		
-	}
-	else if (fase == 2){
-		
-	}
-	else if (fase == 3){
-		
-	}
-	else if (fase == 4){
-		
-	}*/
 }
