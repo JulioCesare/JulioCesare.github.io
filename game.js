@@ -38,7 +38,6 @@ function checkContinue(){
 			name = Math.floor(Math.random() * (names.length));
 			document.getElementById("prompt").innerHTML = names[name] + " TIME";
 			document.getElementById("card").src = "cards/char/" + names[name] + "char.png";
-			console.log("Siamo alla fase 0")
 			lastname = names[name]
 			names.splice(name,1);
 			fase++;
@@ -75,7 +74,6 @@ function checkContinue(){
 			fase++;
 			break;
 		case 2:
-			console.log("Siamo alla fase 2");
 			document.getElementById("card").src = "cards/prompt/" + catName + "/" + cardPicker + ".png";
 			fase++;
 			break;
@@ -84,7 +82,6 @@ function checkContinue(){
 			fase++;
 			break;
 		case 4:
-			console.log("Siamo alla fase 3")
 			nameC = Math.floor(Math.random() * (namesCounter.length));
 			while(namesCounter[nameC] == lastname){
 				nameC = Math.floor(Math.random() * (namesCounter.length));
@@ -107,10 +104,19 @@ function checkContinue(){
 			else{
 				document.getElementById("card").src = "cards/char/versus/EVERYBODYchar.png";
 			}
-			
+			lastname = ""
+			fase++;
+			break;
+		case 5:
+			document.getElementById("card").src = "cards/char/spins/spin.gif";
+			fase++;
+			break;
+		case 6:
+			var spins = 0;
+			spins = Math.floor(Math.random() * 3) + 1;
+			document.getElementById("card").src = "cards/char/spins/spin" + spins + ".png";
 			fase = 0;
 			total_points++;
-			lastname = ""
 			break;
 		}
 }
