@@ -48,25 +48,25 @@ function checkContinue(){
 			if (catNum >= 0 && catNum <= 5){
 				catNum = 2;
 				catName = "URCards";
-				cardPicker = Math.floor((Math.random() * 125) + 1);
+				cardPicker = Math.floor((Math.random() * 2) + 1);
 				while (cardPicker == lastcard){
-					cardPicker = Math.floor((Math.random() * 125) + 1);
+					cardPicker = Math.floor((Math.random() * 2) + 1);
 				}
 			}
 			else if (catNum > 5 && catNum <= 80){
 				catNum = 0;
 				catName = "SfideCards";
-				cardPicker = Math.floor((Math.random() * 25) + 1);
+				cardPicker = Math.floor((Math.random() * 70) + 1);
 				while (cardPicker == lastcard){
-					cardPicker = Math.floor((Math.random() * 25) + 1);
+					cardPicker = Math.floor((Math.random() * 70) + 1);
 				}
 			}
 			else if (catNum > 80 && catNum <= 100){
 				catNum = 1;
 				catName = "EventCards";
-				cardPicker = Math.floor((Math.random() * 5) + 1);
+				cardPicker = Math.floor((Math.random() * 11) + 1);
 				while (cardPicker == lastcard){
-					cardPicker = Math.floor((Math.random() * 5) + 1);
+					cardPicker = Math.floor((Math.random() * 11) + 1);
 				}
 			}
 			document.getElementById("card").src = "cards/categ/" + catNum + "event.png";
